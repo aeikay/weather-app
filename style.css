@@ -3,21 +3,18 @@ body {
   background: linear-gradient(
     90deg,
     rgba(6, 29, 15, 0.6898109585631127) 0%,
-    rgba(75, 222, 185, 1) 0%,
+    #4bdeb9 0%,
     rgba(75, 192, 222, 1) 96%
   );
-  background: rgb(6, 29, 15);
-  background: linear-gradient(
-    90deg,
-    rgba(6, 29, 15, 0.6898109585631127) 0%,
-    rgba(75, 222, 185, 1) 0%,
-    rgba(75, 192, 222, 1) 96%
-  );
-  background: rgb(6, 29, 15);
-  background: linear-gradient(
-    90deg,
-    rgba(6, 29, 15, 0.6898109585631127) 0%,
-    rgba(75, 222, 185, 1) 0%,
-    rgba(75, 192, 222, 1) 96%
-  );
+  font-family: "Caveat", cursive;
+  /* font-family: "Open Sans", sans-serif; */
+  color: rgb(0, 0, 0);
+}
+#date {
+  text-align: center;
+  align-items: center;
+}
+.dark {
+  background: black;
+  color: azure;
 }
