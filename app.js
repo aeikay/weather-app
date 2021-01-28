@@ -15,13 +15,14 @@ button.addEventListener('click',()=>{
     console.log(element.classList);
     if(element.classList.value === "dark"){
         button.textContent= 'Light theme';
+        button.classList.value =  "btn btn-light"
     }
     else{
         button.textContent ="Dark theme";
-        button.classList.toggle('btn btn-light')
+        console.log(button.classList);
+        button.classList.value = "btn btn-dark";
     }
 })
-
 
 window.addEventListener('load',()=>{
 
@@ -39,21 +40,27 @@ window.addEventListener('load',()=>{
     }).then((data)=>{
         console.log(data);
             city.textContent = data.name;
-            temp.textContent = data.main.temp + ' K';
-            let tempinC = data.main.temp-273.15 ;
-            temp.addEventListener('click',()=>{
-                temp.textContent = tempinC + ' C';
-            })
-            // temp.addEventListener('click',()=>{
-            //     temp.textContent = data.main.temp + ' K'; 
-            // })
+            temp.textContent = data.main.temp +' K';
+            let tempC = data.main.temp-273.15;
+            let tempinC = Math.round(tempC*10)/10;
 
+            temp.addEventListener('click',()=>{
+                let str = temp.textContent;                
+                if(str.charAt(str.length-1) === 'C' ){
+                    temp.textContent = data.main.temp + ' K' ;
+                }else{
+                    temp.textContent = tempinC + 'C';
+                }
+            })
             desc.textContent = data.weather[0].description;
         });        
-    })
+    }
+    )
+}
+else{
+    alert('Allow location to get weather forecast')
 }}
 )
-   
 //     var options = {
 //   enableHighAccuracy: true,
 //   timeout: 5000,
