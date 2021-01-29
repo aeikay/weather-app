@@ -16,6 +16,7 @@
     <!--font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
     <title>Weather-app</title>
 </head>
 
@@ -37,7 +38,7 @@
             </div>
             <div class="col-6">
                 <h1>Temperature</h1>              
-                <h1 class="temp"></h1>
+                <h1 class="temp" data-toggle="tooltip" data-placement="left" title="Click to change units"></h1>
             </div>
         </div> 
     </div>
@@ -46,6 +47,45 @@
         <h1>Weather description</h1>
         <h3 class="description">Allow the location access to get weather forecast</h3>
     </div>
+    <div id="forecast" class="container mt-5">
+    <button type="button" id= "forecastbutton" class="btn btn-success justify-content-center align-items-center" data-toggle="tooltip" data-placement="top" title="Shows the forecast for upcoming days">Forecast</button>
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Temperature(day)</th>
+            <th scope="col">Temperature(eve)</th>
+            <th scope="col">Temperature(night)</th>
+            <th scope="col">Weather</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="forecast1" scope="row">1</th>
+            <td class="temp1">Mark</td>
+            <td class="tempE1">Otto</td>
+            <td class="tempN1">@mdo</td>
+            <td class="desc1">@twitter</td>
+        </tr>
+        <tr>
+            <th class="forecast2" scope="row">2</th>
+            <td class="temp2">Jacob</td>
+            <td class="tempE2">Thornton</td>
+            <td class="tempN2">@fat</td>
+            <td class="desc2">@twitter</td>
+        </tr>
+        <tr>
+            <th class="forecast3" scope="row">3</th>
+            <td class="temp3">Larry</td>
+            <td class="tempE3">the Bird</td>
+            <td class="tempN3">@twitter</td>
+            <td class="desc3">@twitter</td>
+        </tr>
+       
+    </tbody>
+</table>
+    </div>
+    
 
     <!--custom js-->
     <script src="app.js"></script>
@@ -53,6 +93,16 @@
     <!--  Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     
 </body>

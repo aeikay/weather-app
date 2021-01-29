@@ -6,7 +6,7 @@ body {
     #4bdeb9 0%,
     rgba(75, 192, 222, 1) 96%
   );
-  font-family: "Caveat", cursive;
+  font-family: "Catamaran", sans-serif;
   /* font-family: "Open Sans", sans-serif; */
   color: rgb(70, 21, 21);
 }
@@ -20,4 +20,8 @@ body {
 }
 .temp {
   cursor: pointer;
+}
+#forecast {
+  font-family: "Catamaran", sans-serif;
+  color: rgb(70, 21, 21);
 }
